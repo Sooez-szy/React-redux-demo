@@ -1,0 +1,12 @@
+import React, {Compoenent, PropTypes} from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import App from './containers/App';
+import congifureStore from './store/congifureStore';
+const store = congifureStore();
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app')
+)
